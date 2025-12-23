@@ -1,18 +1,19 @@
-
 class EmotionEngine:
     def __init__(self):
-        self.emotion = "idle"
+        self.mood = {
+            "happiness": 0.0,
+            "sadness": 0.0,
+            "anger": 0.0,
+            "excitement": 0.0,
+            "calm": 0.0
+        }
+        
+    self.keywords = {
+            "happiness": ["yay", "great", "promoted", "amazing", "love"],
+            "sadness": ["lost", "sad", "failed", "unhappy", "bad"],
+            "excitement": ["hi", "hello", "hey", "morning", "wow"],
+            "anger": ["angry", "mad", "hate", "annoyed"],
+            "calm": ["relax", "calm", "peace", "chill"]
+        }
 
-    def update_emotion(self, event):
-        if event == "voice_detected":
-            self.emotion = "happy"
-        elif event == "no_interaction":
-            self.emotion = "bored"
-        else:
-            self.emotion = "idle"
-
-        return self.emotion
-
-    def get_emotion(self):
-        return self.emotion
-
+    
